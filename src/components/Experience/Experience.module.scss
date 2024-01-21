@@ -1,0 +1,177 @@
+.experience {
+    margin: 100px 0 0;
+    width: 100%;
+    max-width: 1146px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-text2);
+    font-size: 1.1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: justify;
+
+    &Title {
+        font-size: 70px;
+        color: var(--color--main);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 76.5px;
+        margin-bottom: 80px;
+
+        & span {
+            color: var(--color-text2);
+            font-weight: 700;
+        }
+    }
+
+    &Item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 25px;
+        margin-top: 25px;
+        cursor: pointer;
+        color: var(--color-text2);
+        border: 1px solid rgba(204, 214, 246, 0.20);
+
+        &:hover {
+            background-color: var(--bg--fon);
+            -webkit-box-shadow: 22px 14px 25px 6px rgba(47, 59, 84, 0.2);
+            -moz-box-shadow: 22px 14px 25px 6px rgba(47, 59, 84, 0.2);
+            box-shadow: 22px 14px 25px 6px rgba(47, 59, 84, 0.2);
+            color: var(--color-text2);
+
+            & .experienceLink {
+                color: var(--color-text3);
+
+                & svg {
+                    position: relative;
+                    top: -10%;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        @media screen and (max-width: 570px) {
+            &:hover {
+                background-color: var(--bg--fon);
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                color: var(--color-text2);
+
+                .experienceLink {
+                    color: var(--color--main);
+
+                    svg {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        &.darken {
+            background-color: rgba(0, 0, 0, 0.1);
+            filter: blur(5px);
+        }
+    }
+
+    &Data {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 36px;
+        border-right: 1px solid rgba(204, 214, 246, 0.20);
+        border-bottom: 1px solid rgba(204, 214, 246, 0.20);
+        white-space: nowrap;
+        margin-right: 45px;
+        font-weight: 100;
+        font-size: .8vw;
+    }
+
+    &Wrapper {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 55px;
+    }
+
+    &Link {
+        position: relative;
+        display: inline-block;
+        transition: all .3s linear;
+        color: var(--color--main);
+        font-size: 1.2vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27px;
+        margin-bottom: 10px;
+
+        & svg {
+            width: 20px;
+        }
+    }
+
+    &Subtitle {
+        color: var(--color-text1);
+        font-size: 1.1vw;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 27px;
+        margin-bottom: 10px;
+    }
+
+    &Text {
+        width: 100%;
+        text-align: center;
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal
+    }
+
+    @media screen and (max-width:890px) {
+        & {
+            max-width: 100%;
+            margin: 25px auto 0;
+            padding: 0;
+        }
+
+        &Title {
+            font-size: 20px;
+            text-align: left;
+            margin: 20px 0 30px;
+            color: var(--color-text3);
+        }
+    }
+
+    @media screen and (max-width:860px) {
+        &Subtitle {
+            font-size: 12px;
+        }
+
+        &Text {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width:560px) {
+        &Item {
+            padding: 14px;
+            background-color: var(--bg--fon);
+        }
+
+        &Data {
+            writing-mode: vertical-lr;
+            font-feature-settings: "clig" off, "liga" off;
+            font-size: 14px;
+            margin-right: 14px;
+        }
+    }
+}

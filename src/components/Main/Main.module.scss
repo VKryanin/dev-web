@@ -1,0 +1,90 @@
+.main {
+    width: 100%;
+    max-width: 1226px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: 100%;
+    border-right: 1px solid rgba(204, 214, 246, 0.20);
+    border-left: 1px solid rgba(204, 214, 246, 0.20);
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // & div {
+    //     width: 100%;
+    //     max-width: 1146px;
+    //     padding: 0 40px;
+    // }
+
+    @media screen and (max-width:890px) {
+        & {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            width: 100%;
+            margin: 30px auto;
+
+            & section {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width:860px) {
+        & {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            width: 100%;
+            margin: 30px auto;
+
+            & section {
+                flex-grow: 1;
+                max-width: 768px;
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        & {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            width: 100%;
+            margin: 30px auto;
+
+            & section {
+                flex-grow: 1;
+                max-width: 700px;
+            }
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        & {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            width: 100%;
+            margin: 30px auto;
+
+            & section {
+                flex-grow: 1;
+                max-width: 400px;
+            }
+        }
+    }
+
+    @media screen and (max-width:560px) {
+        & {
+            & section {
+                flex-grow: 1;
+                max-width: 300px;
+            }
+        }
+    }
+}

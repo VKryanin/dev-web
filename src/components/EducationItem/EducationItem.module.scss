@@ -1,0 +1,149 @@
+.educationItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 50px;
+    padding: 55px 0 35px;
+    border: 1px solid rgba(204, 214, 246, 0.20);
+    cursor: default;
+
+    &:first-of-type {
+        margin-top: 80px;
+    }
+
+    &Age {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-right: 1px solid rgba(204, 214, 246, 0.20);
+        border-bottom: 1px solid rgba(204, 214, 246, 0.20);
+        padding: 15px 35px;
+    }
+
+    &Header {
+        color: var(--color-text3);
+        font-size: 1.2vw;
+        margin-bottom: 10px;
+    }
+
+    &Profile {
+        font-size: 1.1vw;
+    }
+
+    @media screen and (max-width:890px) {
+        & {
+            max-width: 100%;
+            margin: 15px 0 0;
+            padding: 25px;
+            background-color: var(--bg--fon);
+        }
+    }
+
+    &:hover {
+        background-color: var(--bg--fon);
+
+        .educationItemHeader {
+            color: var(--color-text3);
+        }
+
+        .educationItemImage {
+            transform: scale(1.1);
+        }
+    }
+
+    &Header {
+        transition: all .3s ease;
+    }
+
+    &About {
+        max-width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+
+        @media screen and (max-width:1024px) {
+            & {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    &Image {
+        max-width: 150px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    &Wrapper {
+        position: fixed;
+        transform: translate(50%, -50%);
+        top: -50%;
+        right: -50%;
+        width: 0;
+        opacity: 0;
+        transition: opacity .7s ease;
+
+        .educationImageFull {
+            transition: opacity .6s ease;
+            opacity: 0;
+            object-fit: cover;
+        }
+
+    }
+
+    &WrapperIsOpen {
+        max-width: 300px;
+        width: 100%;
+        z-index: 6;
+        top: 50%;
+        right: 50%;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .educationImageFull {
+            opacity: 1;
+            max-width: 600px;
+            width: 100%;
+            z-index: 6;
+        }
+    }
+
+    &Close {
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        background-image: url(../../images/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: -8%;
+        right: -8%;
+    }
+
+    @media screen and (max-width: 560px){
+        &Close {
+            right: -5px;
+            top: -40px;
+        }
+    }
+
+    &Overlay {
+        position: fixed;
+        transform: translate(50%, -50%);
+        top: 50%;
+        right: 50%;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 5;
+        overflow: hidden;
+    }
+}

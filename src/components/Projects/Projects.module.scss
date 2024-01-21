@@ -1,0 +1,142 @@
+.projects {
+  // box-sizing: border-box;
+  // overflow: hidden;
+  height: 450px;
+  width: 100%;
+  max-width: 1146px;
+  margin: 100px 0 0;
+  padding: 0 40px;
+
+  &Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &Title {
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 100%;
+    font-style: normal;
+    margin-bottom: 16px;
+
+    & span {
+      color: var(--bg);
+      text-shadow:
+        -.5px .5px 1px var(--color-text3),
+        .5px -.5px 1px var(--color-text3),
+        -.5px -.5px 1px var(--color-text3),
+        .5px -1px 1px var(--color-text3);
+      font-weight: 800;
+    }
+  }
+
+  &Buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 150px;
+    width: 100%;
+  }
+
+  &Button {
+    border: none;
+    padding: 0;
+    display: flex;
+
+
+    &:first-of-type {
+      transform: rotate(180deg);
+    }
+  }
+
+  &Wrapper {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1146px;
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  &Item {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 70px;
+    padding: 8px;
+    transition: border .6s linear;
+
+    &:hover {
+      border: 1px solid rgba(204, 214, 246);
+      border-radius: 5px;
+    }
+  }
+
+  &ItemActive {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &ItemInactive {
+    display: none;
+  }
+
+  &Name {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  &Container {
+    display: flex;
+    margin-top: 12px;
+    overflow: hidden;
+
+    & div {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & ul {
+      padding: 0;
+      display: flex;
+      justify-content:flex-start;
+      margin-top: 14px;
+    }
+
+    & li {
+      border: 1px solid rgba(204, 214, 246, 0.20);
+      padding: 15px;
+      border-radius: 5px;
+      width: 112px;
+      text-align: center;
+      margin-right: 16px;
+    }
+
+    & li:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &Image {
+    width: 50%;
+    max-width: 500px;
+    // height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-right: 16px;
+  }
+
+  &Subtitle {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: justify;
+  }
+}
