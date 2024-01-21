@@ -8,9 +8,17 @@ import mesto from '../../images/mesto.jpg';
 import travel from '../../images/travel.jpg';
 import stuff from '../../images/stuff.jpg';
 import roman from '../../images/Roman.jpg';
+import itech from '../../images/itech.jpg';
 import { Link } from 'react-router-dom';
 
 const slider = [
+    {
+        photo: itech,
+        name: 'I-Tech',
+        subtitle: 'Development of a corporate CRM web application for company employees.',
+        stack: ['React', 'TS', 'Moment', 'BEM'],
+        link: 'https://tessera.hopto.org/'
+    },
     {
         photo: roman,
         name: 'Roman Mosaic School',
